@@ -18,7 +18,7 @@ import './welcome.scss';
 function gsWelcomeController (MarvelService) {
   const dm = this;
   dm.state = {};
-  dm.excellent = "don't put it directly in the directive scope";
+  dm.excellent = ["do not touch the custom directive", "try to push characters in here"];
 
   dm.init = function () {
     setTimeout(dm.makeSampleRequest, 1000); // for dramatic effect
