@@ -48,6 +48,9 @@ class MarvelService {
     return this.get('characters', config);
   }
 
+  getCharacterByName(name, config){
+    return this.get('characters?name=' + name, config);
+  }
   // [Number] Id - the id of the character to be retrieved.
   // (Optional) [Object] Config - Additional request configuration.
   // Returns -> Promise -> (Response, Error)

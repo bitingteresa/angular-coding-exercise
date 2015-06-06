@@ -1,6 +1,7 @@
 
 import angular from 'angular';
 import template from './test.jade';
+import { name as MarvelServiceModule } from 'services/marvel';
 import { name as StatusBarModule } from 'directives/status-bar';
 import './test.scss';
 
@@ -10,21 +11,15 @@ function TestController (MarvelService) {
   dm.state = {};
   dm.excellent = ["do not touch the custom directive", "try to push characters in here"];
 
-  dm.init = function () {
-    setTimeout(dm.makeSampleRequest, 1000); // for dramatic effect
-  };
 
-  dm.makeSampleRequest = function () {
-    dm.state.connection = {};
+  dm.getCharacters = function (name) {
+    MarvelService.getCharacterByName(name).success(function(data){
+      console.log(data);
+    });
+  }
+  
 
-    // ping a known-good endpoint
-    MarvelService.getCharacters()
-      .then(() => dm.state.connection.success = true)
-      .catch(() => dm.state.connection.error = true)
-      .finally(() => dm.state.connection.complete = true);
-  };
-
-  dm.init();
+  dm.getCharacters('Rocket Raccoon');
 }
 
 function gsTest () {
