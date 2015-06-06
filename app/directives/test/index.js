@@ -10,16 +10,31 @@ function TestController (MarvelService) {
   const dm = this;
   dm.state = {};
   dm.excellent = ["do not touch the custom directive", "try to push characters in here"];
+  dm.results = [];
 
 
-  dm.getCharacters = function (name) {
+  dm.getCharacterByName = function (name) {
     MarvelService.getCharacterByName(name).success(function(data){
       console.log(data);
     });
   }
   
+  dm.getCharactersByNameStartsWith = function(name) {
+    MarvelService.getCharactersByNameStartsWith(name).success(function(data){
+      console.log(data);
+    });
+  }
 
-  dm.getCharacters('Rocket Raccoon');
+  dm.getComicsByTitleStartsWith = function(title){
+    MarvelService.getComicsByTitleStartsWith(title).success(function (data){
+      console.log(data);
+      dm.results = data.data.results;
+    });
+  }
+  // dm.getCharacterByName('Rocket Raccoon');
+  // dm.getCharactersByNameStartsWith('sp');
+  dm.getComicsByTitleStartsWith('uncanny');
+
 }
 
 function gsTest () {

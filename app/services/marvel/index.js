@@ -51,12 +51,24 @@ class MarvelService {
   getCharacterByName(name, config){
     return this.get('characters?name=' + name, config);
   }
+
+  getCharactersByNameStartsWith(name, config){
+    return this.get('characters?nameStartsWith=' + name + '&limit=35', config);
+  }
+
+  getComicsByTitleStartsWith(title, config){
+    return this.get('comics?titleStartsWith=' + title + '&limit=35', config);
+  }
+
+
   // [Number] Id - the id of the character to be retrieved.
   // (Optional) [Object] Config - Additional request configuration.
   // Returns -> Promise -> (Response, Error)
   getCharacterById (id, config) {
     return this.getOne('characters', id, config);
   }
+
+
 
   // Handles the actual process of making the API request, all methods
   // should route through this.
