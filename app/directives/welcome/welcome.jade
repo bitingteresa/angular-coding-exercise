@@ -1,11 +1,13 @@
 gs-status-bar(ng-model='dm.state.connection')
-div.container-fluid
+div.container
   div.row
-    div.col-md-6.col-md-push-3
+    div.col-sm-4
       div.welcome
         h1.welcome__title
           span(ng-if='dm.state.connection.error') Something went wrong while bootstrapping the {{ dm.title }}
           span(ng-if='dm.state.connection.success') Time to get crackin' on {{ dm.title }}
-       p.
-       once again try it {{dm.excellent[1]}}
-      
+    div.col-sm-4
+      p.
+      once again try it 
+    div.col-sm-4 	  
+      okay so focus {{dm.excellent[1]}} 
