@@ -9,33 +9,30 @@ function SearchController (MarvelService) {
   const dm = this;
   dm.searchInput = "";
   dm.results = [];
+  dm.dataLoad = true;
 
-  dm.getCharacterByName = function (name) {
-    MarvelService.getCharacterByName(name).success(function(data){
-      console.log(data);
-    });
-  }
+  // dm.getCharacterByName = function (name) {
+  //   MarvelService.getCharacterByName(name).success(function(data){
+  //     console.log(data);
+  //   });
+  // }
   
-  dm.getCharactersByNameStartsWith = function(name) {
-    MarvelService.getCharactersByNameStartsWith(name).success(function(data){
-      console.log(data);
-    });
-  }
-
+  // dm.getCharactersByNameStartsWith = function(name) {
+  //   MarvelService.getCharactersByNameStartsWith(name).success(function(data){
+  //     console.log(data);
+  //   });
+  // }
   dm.getComicsByTitleStartsWith = function(title){
     MarvelService.getComicsByTitleStartsWith(title).success(function(data){
+      dm.dataLoad = false;
       console.log(data);
+      console.log(dm.dataLoad);
       dm.results = data.data.results;
-      dm.image = data.data.results[0].images[0].path + '/portrait_fantastic.' + data.data.results[0].images[0].extension;
-      console.log(dm.image);
-      console.log(dm.results[0].upc);
     })
   }
   // dm.getCharacterByName('Rocket Raccoon');
   // dm.getCharactersByNameStartsWith('sp');
   // dm.getComicsByTitleStartsWith('uncanny');
-
-
 }
 
 function gsSearch () {
