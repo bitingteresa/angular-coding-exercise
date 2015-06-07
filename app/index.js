@@ -62,15 +62,15 @@ function config ($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('welcome', {
       url : '/',
-      template : '<gs-welcome title="GSTV FE Coding Exercise"></gs-welcome>'
+      template : '<gs-welcome title="Marvel Comic Collector"></gs-welcome>'
     })
     .state('search', {
     	url: '/search',
-    	template : '<gs-search title="Teresa knows it all"></gs-search>'
+    	template : '<gs-search title="Add a Comic"></gs-search>'
     })
     .state('my-collection', {
       url: '/my-collection',
-      template : '<gs-my-collection title="Dream On"></gs-my-collection>'
+      template : '<gs-my-collection title="My Collection"></gs-my-collection>'
     })
   $urlRouterProvider.otherwise('/');
 }

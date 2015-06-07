@@ -10,7 +10,16 @@
   <link rel="stylesheet" href="{%=o.htmlWebpackPlugin.files.chunks.app.css[0]%}">
 </head>
 <body>
-  <div ui-view></div>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="fluid-container">
+      <ul>
+        <li class="marvel-nav"><a ui-sref="welcome">MARVEL COMIC COLLECTOR</a></li>  
+        <li class="other-nav"><a ui-sref="my-collection">My Collection</a></li>
+        <li class="other-nav"><a ui-sref="search">Add a Comic</a></li>
+      </ul>  
+    </div>  
+  </nav>
+  <div class="viewing" ui-view></div>
   <script src="{%=o.htmlWebpackPlugin.files.chunks.vendor.entry%}"></script>
   <script src="{%=o.htmlWebpackPlugin.files.chunks.app.entry%}"></script>
 </body>
