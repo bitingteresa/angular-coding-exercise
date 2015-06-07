@@ -1,1 +1,5 @@
-h1 {{dm.title}}
+div.view-collection
+	h1 {{dm.title}}
+	div(ng-repeat='comic in dm.myComicCollection')
+		p Title: {{comic.title}} 
+			img(ng-src='{{comic.image}}')
