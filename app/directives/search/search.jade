@@ -1,0 +1,6 @@
+h1 Search Marvel Comics
+div.search
+	span.search-box
+	input(type="text", placeholder="Title Starts With...", ng-model="dm.searchInput")
+	button.btn(ng-click="dm.getComicsByTitleStartsWith(dm.searchInput)") Awesome
+	p {{dm.title}} {{dm.searchInput}}
