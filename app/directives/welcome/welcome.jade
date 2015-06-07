@@ -1,15 +1,11 @@
-gs-status-bar(ng-model='dm.state.connection')
-div.container
-  div.row
-    div.col-sm-4
-      div.welcome
-        h1.welcome__title
-          span(ng-if='dm.state.connection.error') Something went wrong while bootstrapping the {{ dm.title }}
-          span(ng-if='dm.state.connection.success') Time to get crackin' on {{ dm.title }}
-    div.col-sm-4
-      p once again try it
-      a(ui-sref='search') Add Comic Book
-      br
-      a(ui-sref='my-collection') My Collection  
-    div.col-sm-4 	  
-      okay so focus {{dm.excellent[1]}} 
+div.background  
+  div.container
+    div.row
+      div.col-sm-6
+        div.welcome
+        p I want to make sure this is placing it correctly.
+      div.col-sm-6
+        div.welcome
+          h1.welcome__title
+            span The {{ dm.title }} 
+            h4 Helping you keep track of your comic collection since 2015.

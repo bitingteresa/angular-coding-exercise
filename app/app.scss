@@ -32,6 +32,10 @@ $icon-font-path: '../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 // Custom Styles
 // =============================================================================
 
+html {
+	background-color: #f0141e;
+}
+
 body {
   // Visual
   background-color: $base16-ocean--07;
@@ -39,6 +43,8 @@ body {
 
 .navbar-default {
 	background-color: white;
+	border-color: black;
+	
 }
 
 ul {

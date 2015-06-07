@@ -14,11 +14,15 @@
 
   // Typography
   font-weight: $font-weight--ultrabold;
+  font-size: 72px;
   line-height: 1.1;
-  text-align: center;
+  
 
   > span {
     display: block;
   }
+}
 
+.background {
+	background-color: white;
 }
