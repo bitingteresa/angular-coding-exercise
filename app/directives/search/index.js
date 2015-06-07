@@ -7,10 +7,8 @@ import './search.scss';
 /* @ngInject */
 function SearchController (MarvelService) {
   const dm = this;
-  dm.state = {};
   dm.searchInput = "";
   dm.results = [];
-
 
   dm.getCharacterByName = function (name) {
     MarvelService.getCharacterByName(name).success(function(data){
@@ -25,9 +23,13 @@ function SearchController (MarvelService) {
   }
 
   dm.getComicsByTitleStartsWith = function(title){
-    MarvelService.getComicsByTitleStartsWith(title).success(function (data){
+    MarvelService.getComicsByTitleStartsWith(title).success(function(data){
       console.log(data);
       dm.results = data.data.results;
+      dm.image = data.data.results[0].images[0].path + '/portrait_fantastic.' + data.data.results[0].images[0].extension;
+      console.log(dm.image);
+    }).then(function(){
+      $state.go('results')
     });
   }
   // dm.getCharacterByName('Rocket Raccoon');
