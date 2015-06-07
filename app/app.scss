@@ -43,7 +43,7 @@ body {
 
 .navbar-default {
 	background-color: white;
-	border-color: black;
+	border-color: white;
 	
 }
 
@@ -65,16 +65,18 @@ a:hover {
 }
 
 .marvel-nav {
+	margin-top: 10px;
 	font-size: 42px;
+	float: left;
 }
 
 .other-nav {
-	margin-top: 25px;
+	margin-top: 38px;
 	margin-right: 50px;
 	font-size: 18px;
 	float: right;
 }
 
 .viewing {
-	margin-top: 70px;
+	margin-top: 100px;
 }
