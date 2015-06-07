@@ -58,11 +58,22 @@ li {
 a {
 	color: black;
 	font-weight: 600;
+	text-decoration: none;
 }
 
 a:hover {
 	text-decoration: none;
 	color: #b50f16;
+}
+
+a:active {
+	text-decoration: none;
+	color: #f0141e;
+}
+
+a:visited {
+	text-decoration: none;
+	color: black;
 }
 
 .marvel-nav {
