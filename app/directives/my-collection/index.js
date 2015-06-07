@@ -157,7 +157,7 @@ function gsMyCollectionController (ParseService) {
            "updatedAt": "2015-06-07T11:33:16.565Z"
        });
   // dm.addComic({"upc": "1234567890", "comment":"slightly used", "description": "test description", "image": "http://i.annihil.us/u/prod/marvel/i/mg/b/c0/554ccb0c7a2c5/portrait_fantastic.jpg", "title": "test title"});
-  // dm.getCollection();
+  dm.getCollection();
   dm.testing();
 
 }

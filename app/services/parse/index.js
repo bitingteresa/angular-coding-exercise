@@ -8,8 +8,8 @@ class ParseService {
     this._$http = $http;
   }
 
-  get (resource, config) {
-    return this.dispatch('GET', resource, config);
+  get (resource) {
+    return this.dispatch('GET', resource);
   }
 
   post (resource, config) {

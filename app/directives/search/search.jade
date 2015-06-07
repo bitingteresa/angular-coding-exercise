@@ -1,18 +1,16 @@
-h1 Search Marvel Comics
+
 div.search
-	span.search-box
-	input(type='text', placeholder='Title Starts With...', ng-model='dm.searchInput')
-	button.btn(ng-click='dm.getComicsByTitleStartsWith(dm.searchInput)') Awesome
-	br
-	
-div.results(ng-if='dm.results.length >= 1')
-	ul
-		li(ng-repeat='comic in dm.results')
-			img(ng-src='{{comic.images[0].path}}/portrait_fantastic.{{comic.images[0].extension}}') 
-			span Title: {{comic.title}} 
-			span Description: {{comic.description}}
-			span UPC: {{comic.upc}} 
-			br
+	div.container
+		div.search-box 
+			input(type='text', placeholder='Title Starts With...', ng-model='dm.searchInput')
+			button.btn(ng-click='dm.getComicsByTitleStartsWith(dm.searchInput)') Search
+	div.total-results(ng-if='dm.results.length >= 1')
+		ul
+			li.results(ng-repeat='comic in dm.results')
+				img(ng-src='{{comic.images[0].path}}/portrait_fantastic.{{comic.images[0].extension}}') 
+				div.text-box
+					span.title {{comic.title}} 
+
 			
 			
 	
