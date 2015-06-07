@@ -5,7 +5,7 @@ import { name as MarvelServiceModule } from 'services/marvel';
 import './search.scss';
 
 /* @ngInject */
-function SearchController (MarvelService, $stateProvider) {
+function SearchController (MarvelService) {
   const dm = this;
   dm.searchInput = "";
   dm.results = [];
@@ -28,9 +28,8 @@ function SearchController (MarvelService, $stateProvider) {
       dm.results = data.data.results;
       dm.image = data.data.results[0].images[0].path + '/portrait_fantastic.' + data.data.results[0].images[0].extension;
       console.log(dm.image);
-    }).then(function(){
-      $state.reload('search');
-    });
+      console.log(dm.results[0].upc);
+    })
   }
   // dm.getCharacterByName('Rocket Raccoon');
   // dm.getCharactersByNameStartsWith('sp');

@@ -3,8 +3,15 @@ div.search
 	span.search-box
 	input(type='text', placeholder='Title Starts With...', ng-model='dm.searchInput')
 	button.btn(ng-click='dm.getComicsByTitleStartsWith(dm.searchInput)') Awesome
-
-gs-results
-img(src='http://i.annihil.us/u/prod/marvel/i/mg/e/03/555c9e9322454/portrait_fantastic.jpg')
-img(src='dm.image') 
-p replace this with dm.image and ng-repeat
+	br
+	img(src='http://i.annihil.us/u/prod/marvel/i/mg/e/03/555c9e9322454/portrait_fantastic.jpg')
+div.results(ng-if='dm.results.length >= 1')
+	ul
+		li(ng-repeat='comic in dm.results')
+			img(ng-src='{{comic.images[0].path}}/portrait_fantastic.{{comic.images[0].extension}}') 
+			span Title: {{comic.title}} 
+			span UPC: {{comic.upc}} 
+			br
+			
+			
+	
