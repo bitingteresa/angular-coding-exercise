@@ -4,7 +4,7 @@ div.search
 	input(type='text', placeholder='Title Starts With...', ng-model='dm.searchInput')
 	button.btn(ng-click='dm.getComicsByTitleStartsWith(dm.searchInput)') Awesome
 	br
-	img(src='http://i.annihil.us/u/prod/marvel/i/mg/e/03/555c9e9322454/portrait_fantastic.jpg')
+	
 div.results(ng-if='dm.results.length >= 1')
 	ul
 		li(ng-repeat='comic in dm.results')
