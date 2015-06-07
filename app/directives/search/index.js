@@ -5,7 +5,7 @@ import { name as MarvelServiceModule } from 'services/marvel';
 import './search.scss';
 
 /* @ngInject */
-function SearchController (MarvelService) {
+function SearchController (MarvelService, $stateProvider) {
   const dm = this;
   dm.searchInput = "";
   dm.results = [];
@@ -29,7 +29,7 @@ function SearchController (MarvelService) {
       dm.image = data.data.results[0].images[0].path + '/portrait_fantastic.' + data.data.results[0].images[0].extension;
       console.log(dm.image);
     }).then(function(){
-      $state.go('results')
+      $state.reload('search');
     });
   }
   // dm.getCharacterByName('Rocket Raccoon');
@@ -51,6 +51,7 @@ function gsSearch () {
   };
 }
 
-export default angular.module('gstv.directives.test', [
+export default angular.module('gstv.directives.search', [
+  MarvelServiceModule
 ])
   .directive('gsSearch', gsSearch);

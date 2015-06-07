@@ -1,9 +1,10 @@
 h1 Search Marvel Comics
 div.search
 	span.search-box
-	input(type = 'text', placeholder = 'Title Starts With...', ng-model = 'dm.searchInput')
-	button.btn(ng-click = 'dm.getComicsByTitleStartsWith(dm.searchInput)') Awesome
+	input(type='text', placeholder='Title Starts With...', ng-model='dm.searchInput')
+	button.btn(ng-click='dm.getComicsByTitleStartsWith(dm.searchInput)') Awesome
 
 gs-results
-img(src = 'http://i.annihil.us/u/prod/marvel/i/mg/e/03/555c9e9322454/portrait_fantastic.jpg') 
+img(src='http://i.annihil.us/u/prod/marvel/i/mg/e/03/555c9e9322454/portrait_fantastic.jpg')
+img(src='dm.image') 
 p replace this with dm.image and ng-repeat

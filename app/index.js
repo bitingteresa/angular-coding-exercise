@@ -52,6 +52,7 @@ import './app.scss';
 // ------------------------------------
 import { name as gsWelcomeModule } from 'directives/welcome';
 import {name as gsSearchModule } from 'directives/search';
+import {name as gsMyCollectionModule } from 'directives/my-collection';
 
 // ------------------------------------
 // Application Definition
@@ -67,12 +68,17 @@ function config ($stateProvider, $urlRouterProvider) {
     	url: '/search',
     	template : '<gs-search title="Teresa knows it all"></gs-search>'
     })
+    .state('my-collection', {
+      url: '/my-collection',
+      template : '<gs-my-collection title="Dream On"></gs-my-collection>'
+    })
   $urlRouterProvider.otherwise('/');
 }
 
 angular.module('GSTVApp', [
   'ui.router',
   gsWelcomeModule, 
-  gsSearchModule
+  gsSearchModule,
+  gsMyCollectionModule
 ])
   .config(config);
