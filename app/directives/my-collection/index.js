@@ -95,6 +95,7 @@ function gsMyCollectionController (ParseService) {
            "updatedAt": "2015-06-07T11:27:45.786Z"
        },
        {
+           "comment": "Old",
            "createdAt": "2015-06-07T11:30:00.422Z",
            "description": "It’s Spider-Man versus Beast in a knock-down, drag-out, no holds barred...science fair? Someone at the Jean Grey School knows Spider-Man’s secret identity! And it’s not someone who likes him! Plus, the incredibly short career of the All-New Sinister Six!",
            "image": "http://i.annihil.us/u/prod/marvel/i/mg/a/00/54fdd7a8755c4/portrait_fantastic.jpg",
@@ -104,6 +105,7 @@ function gsMyCollectionController (ParseService) {
            "updatedAt": "2015-06-07T11:30:00.422Z"
        },
        {
+           "comment": "torn",
            "createdAt": "2015-06-07T11:33:16.565Z",
            "description": "Revolution is over. The war has begun. Cyclops and his Uncanny X-Men are tired of the hunt. After another near-fatal Sentinel attack, they take the fight to S.H.I.E.L.D. Maria Hill claims she doesn’t know who’s building the Sentinels — but she hasn’t stopped them, either. She’s relying on Dazzler, S.H.I.E.L.D.’s mutant liaison, to help defuse the situation. But Dazzler lies incapacitated in Mystique’s headquarters — and Mystique makes a convincing imitation! And where is Magneto, the former head of the mutant movement? Then, it’s an Original Sin tie-in as Charles Xavier’s last will and testament is discovered, but what’s concealed within its pages might be the X-Men’s ultimate undoing! Could a previously unknown power now be their greatest threat? How will the Uncanny X-Men cope with the shadows of Xavier’s past? Collecting UNCANNY X-MEN (2013) #19-25. ",
            "image": "http://i.annihil.us/u/prod/marvel/i/mg/3/d0/555b96f62913a/portrait_fantastic.jpg",
@@ -139,6 +141,7 @@ function gsMyCollectionController (ParseService) {
            "updatedAt": "2015-06-07T11:27:45.786Z"
        },
        {
+           "comment": "Old",
            "createdAt": "2015-06-07T11:30:00.422Z",
            "description": "It’s Spider-Man versus Beast in a knock-down, drag-out, no holds barred...science fair? Someone at the Jean Grey School knows Spider-Man’s secret identity! And it’s not someone who likes him! Plus, the incredibly short career of the All-New Sinister Six!",
            "image": "http://i.annihil.us/u/prod/marvel/i/mg/a/00/54fdd7a8755c4/portrait_fantastic.jpg",
@@ -148,6 +151,7 @@ function gsMyCollectionController (ParseService) {
            "updatedAt": "2015-06-07T11:30:00.422Z"
        },
        {
+           "comment": "Will Trade",
            "createdAt": "2015-06-07T11:33:16.565Z",
            "description": "Revolution is over. The war has begun. Cyclops and his Uncanny X-Men are tired of the hunt. After another near-fatal Sentinel attack, they take the fight to S.H.I.E.L.D. Maria Hill claims she doesn’t know who’s building the Sentinels — but she hasn’t stopped them, either. She’s relying on Dazzler, S.H.I.E.L.D.’s mutant liaison, to help defuse the situation. But Dazzler lies incapacitated in Mystique’s headquarters — and Mystique makes a convincing imitation! And where is Magneto, the former head of the mutant movement? Then, it’s an Original Sin tie-in as Charles Xavier’s last will and testament is discovered, but what’s concealed within its pages might be the X-Men’s ultimate undoing! Could a previously unknown power now be their greatest threat? How will the Uncanny X-Men cope with the shadows of Xavier’s past? Collecting UNCANNY X-MEN (2013) #19-25. ",
            "image": "http://i.annihil.us/u/prod/marvel/i/mg/3/d0/555b96f62913a/portrait_fantastic.jpg",

@@ -2,5 +2,7 @@ div.view-collection
 	div.container
 		div.repeat-image(ng-repeat='comic in dm.myComicCollection')
 			img(ng-src='{{comic.image}}') 
-			div.text-box
-				span.text {{comic.title}}
+			div.view-all
+				div.title {{comic.title}}
+				div.text{{comic.description | limitTo: 300 }} 
+				div.comment {{comic.comment | uppercase}}

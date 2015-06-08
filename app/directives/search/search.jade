@@ -11,8 +11,8 @@ div.search
 			ul
 				li.results(ng-repeat='comic in dm.results')
 					img(ng-src='{{comic.images[0].path}}/portrait_fantastic.{{comic.images[0].extension}}') 
-					div.text-box
-						span.title {{comic.title}} 
+					div.results-all-my-words
+						span.results-title {{comic.title}} 
 					div.file-not-found(ng-if='comic.images.length == 0')
 						img(src='https://hoopertriplett.files.wordpress.com/2010/04/comic-book-guy.png')
 						p Worst Image Ever.

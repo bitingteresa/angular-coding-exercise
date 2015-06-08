@@ -1,6 +1,6 @@
 .view-collection {
 	padding-top: 30px;
-	padding-left: 15px;
+	padding-left: 35px;
 	background-color: white;
 	padding-bottom: 80px;
 }
@@ -8,21 +8,39 @@
 .repeat-image {
 	background-color: white;
 	height: 300px;
-	width: 175px;
+	width: 500px;
 	float: left;
 	text-align: center;
 	margin-top: 15px;
 }
 
-.text-box {
+.view-all {
 	margin-left: 3px;
-	width: 168px;
-	height: 48px;
+	float: right;
+	width: 300px;
+	background-color: white;
+	text-align: justify;
+}
+
+.title {
+	padding-top: 8px;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	height: 40px;
 	background-color: black;
+	color: white;
 }
 
 .text {
+	margin-top: 20px;
 	font-size: 16px;
+	color: black;
+}
+
+.comment {
+	margin-top: 5px;
 	font-weight: bold;
-	color: white;
+	text-align: center;
+	color: #f0141e;
 }
