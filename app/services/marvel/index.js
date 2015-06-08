@@ -78,7 +78,9 @@ class MarvelService {
   // Returns -> Promise -> (Response, Error)
   dispatch (requestType, resource, config) {
     const endpoint = [MARVEL_API, resource].join('/');
-
+    this._$http.defaults.headers.common['X-Parse-Application-Id'] = undefined;
+    this._$http.defaults.headers.common['X-Parse-REST-API-Key'] = undefined;
+    this._$http.defaults.headers.common['Content-Type'] = undefined;
     return this._$http[requestType.toLowerCase()](endpoint, config);
   }
 }

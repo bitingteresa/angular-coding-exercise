@@ -6,7 +6,7 @@ import {name as ParseServiceModule} from 'services/parse'
 import './search.scss';
 
 /* @ngInject */
-function SearchController (MarvelService, ParseService) {
+function SearchController (MarvelService, ParseService, $state) {
   const dm = this;
   dm.searchInput = "";
   dm.results = [];
@@ -28,6 +28,7 @@ function SearchController (MarvelService, ParseService) {
 
   dm.addComic = function (comicInfo) {
     ParseService.addComic(comicInfo).success(function(data){
+      $state.go('my-collection');
     });
   }
   // dm.getCharacterByName('Rocket Raccoon');
@@ -47,6 +48,7 @@ function gsSearch () {
 }
 
 export default angular.module('gstv.directives.search', [
-  MarvelServiceModule
+  MarvelServiceModule,
+  'ui.router'
 ])
   .directive('gsSearch', gsSearch);
