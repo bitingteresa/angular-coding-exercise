@@ -3,8 +3,8 @@ div.search
 	div.container
 		div.search-box 
 			input(type='text', placeholder='Title Starts With...', ng-model='dm.searchInput')
-			button.btn(ng-click='dm.getComicsByTitleStartsWith(dm.searchInput)') Search
-			div.no-bueno-search(ng-if='dataLoad == true')
+			button.btn(ng-click='dm.search()') Search
+			div.no-bueno-search(ng-show='dataLoad')
 				img(src='https://hoopertriplett.files.wordpress.com/2010/04/comic-book-guy.png')
 				p Worst Search Ever.
 		div.total-results(ng-if='dm.results.length >= 1')

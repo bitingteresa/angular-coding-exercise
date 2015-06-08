@@ -6,5 +6,5 @@ div.view-collection
 				div.delete-button(ng-click='dm.deleteComic(comic.objectId)') 
 					img(src='http://www.terpac.com/images/framework/close.png') 
 				div.title {{comic.title}}
-				div.text{{comic.description | limitTo: 300 }} 
+				div.text{{comic.description}} 
 				div.comment {{comic.comment | uppercase}} 
