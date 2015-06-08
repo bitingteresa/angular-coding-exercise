@@ -2,7 +2,9 @@ div.view-collection
 	div.container
 		div.repeat-image(ng-repeat='comic in dm.myComicCollection')
 			img(ng-src='{{comic.image}}') 
-			div.view-all 
+			div.view-all
+				div.delete-button(ng-click='dm.deleteComic(comic.objectId)') 
+					img(src='http://www.terpac.com/images/framework/close.png') 
 				div.title {{comic.title}}
 				div.text{{comic.description | limitTo: 300 }} 
 				div.comment {{comic.comment | uppercase}} 
