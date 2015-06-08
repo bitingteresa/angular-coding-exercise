@@ -16,8 +16,7 @@
 // http://babeljs.io/docs/learn-es6/
 // ------------------------------------
 import angular from 'angular';
-import AUTH_KEYS from 'config/marvel.auth.js';
-// import MarvelApiInterceptor from './interceptor';
+import MarvelApiInterceptor from './interceptor';
 const MARVEL_API = 'http://gateway.marvel.com/v1/public';
 
 // ------------------------------------
@@ -78,7 +77,10 @@ class MarvelService {
   // (Optional) [Object] Config - Additional request configuration.
   // Returns -> Promise -> (Response, Error)
   dispatch (requestType, resource, config) {
-    const endpoint = [MARVEL_API, resource, AUTH_KEYS].join('/');
+    const endpoint = [MARVEL_API, resource].join('/');
+    // this._$http.defaults.headers.common['X-Parse-Application-Id'] = undefined;
+    // this._$http.defaults.headers.common['X-Parse-REST-API-Key'] = undefined;
+    // this._$http.defaults.headers.common['Content-Type'] = undefined;
     return this._$http[requestType.toLowerCase()](endpoint, config);
   }
 }
@@ -87,7 +89,7 @@ MarvelService.$inject = ['$http'];
 // ------------------------------------
 /* @ngInject */
 function config ($httpProvider) {
-  // $httpProvider.interceptors.push(MarvelApiInterceptor);
+  $httpProvider.interceptors.push(MarvelApiInterceptor);
 }
 
 export default angular.module('gstv.services.marvel', [])
