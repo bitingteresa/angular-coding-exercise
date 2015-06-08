@@ -42,10 +42,11 @@ class ParseService {
   ////////////////////////////////////////////////////
 dispatch (requestType, resource, config) {
    const endpoint = [PARSE_API, resource].join('/');
-   // this._$http.defaults.headers.common['X-Parse-Application-Id'] = 'dtauSPmJtWaPoU4moKlB8cYsaJ9pCOMe9lCJ8uAI';
-   // this._$http.defaults.headers.common['X-Parse-REST-API-Key'] = PARSE_REST_KEY;
-   // this._$http.defaults.headers.common['Content-Type'] = 'application/json';
-   return this._$http[requestType.toLowerCase()](endpoint, {headers: {'X-Parse-Application-Id': 'dtauSPmJtWaPoU4moKlB8cYsaJ9pCOMe9lCJ8uAI', 'X-Parse-REST-API-Key':PARSE_REST_KEY, 'Content-Type': 'application/json'}});
+   this._$http.defaults.headers.common['X-Parse-Application-Id'] = 'dtauSPmJtWaPoU4moKlB8cYsaJ9pCOMe9lCJ8uAI';
+   this._$http.defaults.headers.common['X-Parse-REST-API-Key'] = PARSE_REST_KEY;
+   this._$http.defaults.headers.common['Content-Type'] = 'application/json';
+  return this._$http[requestType.toLowerCase()](endpoint, config);
+   // return this._$http[requestType.toLowerCase()](endpoint, {headers: {'X-Parse-Application-Id': 'dtauSPmJtWaPoU4moKlB8cYsaJ9pCOMe9lCJ8uAI', 'X-Parse-REST-API-Key':PARSE_REST_KEY, 'Content-Type': 'application/json'}});
  }
 }
 ParseService.$inject = ['$http'];
