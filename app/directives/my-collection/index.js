@@ -20,7 +20,7 @@ function gsMyCollectionController (ParseService) {
     });
   }
   
-  dm.deleteComic('ruCq4ym3cc');
+  // dm.deleteComic('BgbbUrLSz1');
   dm.getCollection();
 }
 
