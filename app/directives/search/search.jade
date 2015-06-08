@@ -4,15 +4,16 @@ div.search
 		div.search-box 
 			input(type='text', placeholder='Title Starts With...', ng-model='dm.searchInput')
 			button.btn(ng-click='dm.getComicsByTitleStartsWith(dm.searchInput)') Search
-		div.no-bueno-search(ng-show='dataLoad')
-			img(src='https://hoopertriplett.files.wordpress.com/2010/04/comic-book-guy.png')
-			p Worst Search Ever.
+			div.no-bueno-search(ng-if='dataLoad == true')
+				img(src='https://hoopertriplett.files.wordpress.com/2010/04/comic-book-guy.png')
+				p Worst Search Ever.
 		div.total-results(ng-if='dm.results.length >= 1')
 			ul
 				li.results(ng-repeat='comic in dm.results')
-					img(ng-src='{{comic.images[0].path}}/portrait_fantastic.{{comic.images[0].extension}}') 
-					div.results-all-my-words
-						span.results-title {{comic.title}} 
-					div.file-not-found(ng-if='comic.images.length == 0')
-						img(src='https://hoopertriplett.files.wordpress.com/2010/04/comic-book-guy.png')
-						p Worst Image Ever.
+					div.add-comic(ng-click='dm.addComic({title:comic.title, description: comic.description, upc: comic.upc, image:comic.images[0].path + "/portrait_fantastic." + comic.images[0].extension})')
+						img(ng-src='{{comic.images[0].path}}/portrait_fantastic.{{comic.images[0].extension}}') 
+						div.results-all-my-words
+							span.results-title {{comic.title}} 
+						div.file-not-found(ng-if='comic.images.length == 0')
+							img(src='https://hoopertriplett.files.wordpress.com/2010/04/comic-book-guy.png')
+							p Worst Image Ever.

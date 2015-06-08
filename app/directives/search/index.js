@@ -2,20 +2,15 @@
 import angular from 'angular';
 import template from './search.jade';
 import { name as MarvelServiceModule } from 'services/marvel';
+import {name as ParseServiceModule} from 'services/parse'
 import './search.scss';
 
 /* @ngInject */
-function SearchController (MarvelService) {
+function SearchController (MarvelService, ParseService) {
   const dm = this;
   dm.searchInput = "";
   dm.results = [];
-  dm.dataLoad = true;
-
-  // dm.getCharacterByName = function (name) {
-  //   MarvelService.getCharacterByName(name).success(function(data){
-  //     console.log(data);
-  //   });
-  // }
+  dm.dataLoad = false;
   
   // dm.getCharactersByNameStartsWith = function(name) {
   //   MarvelService.getCharactersByNameStartsWith(name).success(function(data){
@@ -24,14 +19,18 @@ function SearchController (MarvelService) {
   // }
   dm.getComicsByTitleStartsWith = function(title){
     MarvelService.getComicsByTitleStartsWith(title).success(function(data){
-      dm.dataLoad = false;
+      dm.dataLoad = true;
       console.log(data);
       console.log(dm.dataLoad);
       dm.results = data.data.results;
     })
   }
+
+  dm.addComic = function (comicInfo) {
+    ParseService.addComic(comicInfo).success(function(data){
+    });
+  }
   // dm.getCharacterByName('Rocket Raccoon');
-  // dm.getCharactersByNameStartsWith('sp');
   // dm.getComicsByTitleStartsWith('uncanny');
 }
 
