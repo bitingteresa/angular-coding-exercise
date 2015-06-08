@@ -35,8 +35,8 @@ class ParseService {
     return this.post('collection', config);
   }
 
-  deleteComic(config) {
-    return this.delete('collection', config);
+  deleteComic(id) {
+    return this.delete('collection/' + id);
   }
 
   ////////////////////////////////////////////////////
