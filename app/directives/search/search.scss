@@ -31,7 +31,7 @@ input {
 //results portion
 
 .total-results {
-	margin-left: 24px;
+	margin-left: 20px;
 	background-color: white;
 	padding-top: 20px;
 	height: 2000px;
@@ -57,4 +57,19 @@ input {
 	font-size: 16px;
 	font-weight: bold;
 	color: white;
+}
+
+//no bueno
+.no-bueno-search {
+	width: 50%;
+	margin-top: 20px;
+	margin-left: 23%;
+	text-align: center;
+}
+
+.no-bueno-text {
+	width: 250px;
+	float: left;
+	font-size: 72px;
+	font-weight: bold;
 }
