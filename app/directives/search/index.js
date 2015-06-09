@@ -15,11 +15,6 @@ function SearchController (MarvelService, ParseService, $state) {
   dm.commentInput = "";
   dm.singleComic = [];
   
-  // dm.getCharactersByNameStartsWith = function(name) {
-  //   MarvelService.getCharactersByNameStartsWith(name).success(function(data){
-  //     console.log(data);
-  //   });
-  // }
   dm.getComicsByTitleStartsWith = function(title){
     MarvelService.getComicsByTitleStartsWith(title).success(function(data){
       console.log(data);
@@ -41,8 +36,7 @@ function SearchController (MarvelService, ParseService, $state) {
 
   dm.addComic = function (comicInfo) {
     ParseService.addComic(comicInfo).success(function(data){
-      console.log(dm.singleComic);
-      // $state.go('my-collection');
+      $state.go('my-collection');
     });
   }
 

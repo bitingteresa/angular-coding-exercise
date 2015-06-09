@@ -21,4 +21,4 @@ div.form(ng-show='dm.commentForm')
 		input.comment(type='text', placeholder='Enter in the condition or note for comic', ng-model='dm.commentInput')
 		br
 		button.btn(ng-click='dm.cancel()') Cancel
-		button.btn(ng-click='dm.addComic({title:comic.title, description: comic.description, upc: comic.upc, image:comic.images[0].path + "/portrait_fantastic." + comic.images[0].extension})') Add Comic
+		button.btn(ng-click='dm.addComic({description:dm.singleComic[0].description, image:dm.singleComic[0].image, title:dm.singleComic[0].title, upc:dm.singleComic[0].upc, comment:dm.commentInput})') Add Comic
