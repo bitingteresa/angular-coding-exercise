@@ -11,6 +11,9 @@ function SearchController (MarvelService, ParseService, $state) {
   dm.searchInput = "";
   dm.results = [];
   dm.dataLoad = false;
+  dm.commentForm = false;
+  dm.commentInput = "";
+  dm.singleComic = [];
   
   // dm.getCharactersByNameStartsWith = function(name) {
   //   MarvelService.getCharactersByNameStartsWith(name).success(function(data){
@@ -38,10 +41,20 @@ function SearchController (MarvelService, ParseService, $state) {
 
   dm.addComic = function (comicInfo) {
     ParseService.addComic(comicInfo).success(function(data){
-      $state.go('my-collection');
+      console.log(dm.singleComic);
+      // $state.go('my-collection');
     });
   }
 
+  dm.getCommentForm = function (comicInfo) {
+    dm.commentForm = true;
+    dm.singleComic.push(comicInfo);
+    console.log(dm.singleComic);
+  }
+
+  dm.cancel = function () {
+    dm.commentForm = false;
+  }
   // dm.getCharacterByName('Rocket Raccoon');
   // dm.getComicsByTitleStartsWith('uncanny');
 }

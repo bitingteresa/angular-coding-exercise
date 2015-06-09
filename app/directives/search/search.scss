@@ -21,7 +21,7 @@ button:hover {
 	color: white;
 }
 
-input {
+.search-input {
 	width: 50%;
 	height: 40px;
 	font-size: 24px;
@@ -31,7 +31,6 @@ input {
 //results portion
 
 .total-results {
-	margin-left: 20px;
 	background-color: white;
 	padding-top: 20px;
 	height: 2000px;
@@ -74,3 +73,18 @@ input {
 	font-weight: bold;
 }
 
+//form
+
+.form {
+	padding-top: 30px;
+	background-color: white;
+	padding-bottom: 100px;
+	padding-left: 18px;
+}
+
+.comment {
+	height: 80px;
+	width: 400px;
+	font-size: 18px;
+	margin-bottom: 40px;
+}
