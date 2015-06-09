@@ -62,7 +62,7 @@ function config ($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('welcome', {
       url : '/',
-      template : '<gs-welcome title="Marvelous Collective"></gs-welcome>'
+      template : '<gs-welcome title="Marvel Collective"></gs-welcome>'
     })
     .state('search', {
     	url: '/search',
