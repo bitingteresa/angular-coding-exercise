@@ -77,6 +77,11 @@ a:visited {
 	color: black;
 }
 
+a:focus {
+	text-decoration: none;
+	color: black;
+}
+
 .marvel-nav {
 	margin-top: 10px;
 	font-size: 42px;

@@ -9,14 +9,15 @@ div.search(ng-hide='dm.commentForm')
 					h2.no-bueno-text Worst Search Ever.	
 		div.total-results(ng-if='dm.results.length >= 1')
 			ul
-				li.results(ng-repeat='comic in dm.results')
-					div(ng-click='dm.getCommentForm({title:comic.title, description:comic.description, upc:comic.upc, image:comic.images[0].path + "/portrait_fantastic." + comic.images[0].extension})')
-						img(ng-src='{{comic.images[0].path}}/portrait_fantastic.{{comic.images[0].extension}}') 
-						div.results-all-my-words
-							span.results-title {{comic.title}} 
-						div.file-not-found(ng-if='comic.images.length == 0')
-							img(src='https://hoopertriplett.files.wordpress.com/2010/04/comic-book-guy.png' width='110' height='200')
-							h4 Worst Image Ever.
+				a(href="#")
+					li.results(ng-repeat='comic in dm.results')
+						div(ng-click='dm.getCommentForm({title:comic.title, description:comic.description, upc:comic.upc, image:comic.images[0].path + "/portrait_fantastic." + comic.images[0].extension})')
+							img(ng-src='{{comic.images[0].path}}/portrait_fantastic.{{comic.images[0].extension}}') 
+							div.results-all-my-words
+								span.results-title {{comic.title}} 
+							div.file-not-found(ng-if='comic.images.length == 0')
+								img(src='https://hoopertriplett.files.wordpress.com/2010/04/comic-book-guy.png' width='110' height='200')
+								h4 Worst Image Ever.
 div.form(ng-show='dm.commentForm')
 	div.container
 		input.comment(type='text', placeholder='Enter in the condition or note for comic', ng-model='dm.commentInput')
