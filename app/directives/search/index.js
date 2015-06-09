@@ -17,7 +17,7 @@ function SearchController (MarvelService, ParseService, $state) {
   
   dm.getComicsByTitleStartsWith = function(title){
     MarvelService.getComicsByTitleStartsWith(title).success(function(data){
-      console.log(data);
+      // console.log(data);
       dm.dataLoad = true;
       dm.results = data.data.results;
       dm.results['description'] = dm.limitDescription(dm.results);
@@ -43,14 +43,11 @@ function SearchController (MarvelService, ParseService, $state) {
   dm.getCommentForm = function (comicInfo) {
     dm.commentForm = true;
     dm.singleComic.push(comicInfo);
-    console.log(dm.singleComic);
   }
 
   dm.cancel = function () {
     dm.commentForm = false;
   }
-  // dm.getCharacterByName('Rocket Raccoon');
-  // dm.getComicsByTitleStartsWith('uncanny');
 }
 
 function gsSearch () {
