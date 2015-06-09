@@ -1,11 +1,12 @@
 div.search(ng-hide='dm.commentForm')
 	div.container
-		div.search-box 
-			input.search-input(type='text', placeholder='Title Starts With...', ng-model='dm.searchInput')
-			button.btn(ng-click='dm.getComicsByTitleStartsWith(dm.searchInput)') Search
-			div.no-bueno-search(ng-if='dm.results.length == 0 && dm.dataLoad')
-				img(src='https://hoopertriplett.files.wordpress.com/2010/04/comic-book-guy.png')
-				h2.no-bueno-text Worst Search Ever.	
+		div.search-box
+			form 
+				input.search-input(type='text', placeholder='Title Starts With...', ng-model='dm.searchInput', required)
+				button.btn(ng-click='dm.getComicsByTitleStartsWith(dm.searchInput)') Search
+				div.no-bueno-search(ng-if='dm.results.length == 0 && dm.dataLoad')
+					img(src='https://hoopertriplett.files.wordpress.com/2010/04/comic-book-guy.png')
+					h2.no-bueno-text Worst Search Ever.	
 		div.total-results(ng-if='dm.results.length >= 1')
 			ul
 				li.results(ng-repeat='comic in dm.results')
